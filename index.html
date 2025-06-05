@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Карта без искажений</title>
+    <title>Карта 830×1600</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map {
             height: 100vh;
-            aspect-ratio: 2 / 1; /* Подставь свои пропорции */
+            width: 100vw;
         }
     </style>
 </head>
@@ -14,17 +14,17 @@
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        const map = L.map('map').setView([50, 100], 1);
+        const map = L.map('map').setView([50, 96.5], 1);
 
-        // Для карты 2000×1000 (2:1)
-        L.imageOverlay('map.png', [[0, 0], [100, 200]]).addTo(map);
-
-        // Или авто-подгонка:
+        // Автоподгон под пропорции изображения
         const img = new Image();
         img.src = 'map.png';
         img.onload = function() {
             const ratio = this.width / this.height;
-            L.imageOverlay('map.jpg', [[0, 0], [100, 100 * ratio]]).addTo(map);
+            L.imageOverlay('map.png', [
+                [0, 0],
+                [100, 100 * ratio]
+            ]).addTo(map);
         };
     </script>
 </body>
