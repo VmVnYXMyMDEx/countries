@@ -9,19 +9,24 @@
             font-family: Arial, sans-serif;
         }
         
+        .container {
+            display: flex;
+            align-items: flex-start; /* Выравнивание по верхнему краю */
+        }
+        
         .blue-box {
-            background-color: #1e90ff; /* Голубой цвет */
-            width: 50%; /* Растягиваем на всю ширину */
-            padding: 100px 0; /* Отступы сверху и снизу */
-            text-align: center; /* Выравнивание текста по центру */
-            color: white; /* Белый цвет текста */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Небольшая тень для объема */
+            background-color: #1e90ff;
+            width: 50%;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         
         .content {
-            max-width: 800px; /* Максимальная ширина контента */
-            margin: 0 auto; /* Центрирование контента */
-            padding: 0 20px; /* Отступы по бокам для мобильных */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         h1 {
@@ -34,14 +39,21 @@
             font-size: 1.2em;
             line-height: 1.6;
         }
+        
+        img {
+            height: 350px;
+            display: block; /* Убирает лишнее пространство под изображением */
+        }
     </style>
 </head>
 <body>
-    <img src="map.png" height="350px"></png>
-    <div class="blue-box">
-        <div class="content">
-            <h1>МОНТАЖНИК media</h1>
-            <p>4 августа 19:35: Витяунск обьявил войну Котедзу. Будет ли введена помощь с других сторон?</p>
+    <div class="container">
+        <img src="map.png" alt="Карта">
+        <div class="blue-box">
+            <div class="content">
+                <h1>МОНТАЖНИК media</h1>
+                <p>4 августа 19:35: Витяунск обьявил войну Котедзу. Будет ли введена помощь с других сторон?</p>
+            </div>
         </div>
     </div>
     <ul>
